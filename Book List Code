@@ -1,0 +1,27 @@
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    l=[]
+    fx={}
+    fy={}
+
+    for _ in range((4*n)-1):
+        x,y=map(int,input().split())
+        if x not in fx:
+            fx[x]=1
+        else:
+            fx[x]+=1
+        if y not in fy:
+            fy[y]=1
+        else:
+            fy[y]+=1
+    for i in fx:
+        if fx[i]%2 !=0:
+            break
+    for j in fy:
+        if fy[j]%2!=0:
+            break
+
+
+    
+    print(i,j)
