@@ -1,0 +1,33 @@
+import collections
+final=[]
+for _ in range(int(input())):
+    llist=[]
+    
+    llist1=[]
+    n,q=list(map(int,input().split()))
+    string=input()
+    dict=collections.Counter(string)
+    #print(dict)
+    for k,v in dict.items():
+        llist.append(v)
+    #print(llist)
+    #llist3=[]
+    for i in range(q):
+        
+        llist2=[]
+        
+        query=int(input())
+        llist1.append(query)
+    for j in range(len(llist1)):
+        for k  in range(len(llist)):
+            if(llist[k]-llist1[j])<0:
+                llist2.append(0)
+            else:                            
+                llist2.append(llist[k]-llist1[j])
+    #print((llist2))
+        final.append(sum(llist2))        
+        llist2.clear()
+    #final.append(f)
+        #print(llist2)
+for i in final:
+    print(i)
