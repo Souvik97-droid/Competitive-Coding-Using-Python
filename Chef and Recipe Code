@@ -1,0 +1,38 @@
+rom collections import defaultdict
+T=int(input())
+final=[]
+for _ in range(T):
+    freq=[]    
+    count=0    
+    a=0    
+    n=int(input())
+    llist=list(map(int,input().split()))
+    index=[]
+    dict=defaultdict(int)
+    d=defaultdict(list)
+    for i in llist:
+        dict[i]+=1
+    for k,v in dict.items():
+        freq.append(v)
+    #print(freq)
+    if(len(set(freq)))!=len(freq):
+        count+=1
+    
+    for i in range(n):
+        d[llist[i]].append(i+1)
+    
+    for v in d.values():
+        for i in range(len(v)-1):
+            if len(v)==1:
+                pass
+            else:
+                k=abs(v[i+1]-v[i])
+                if(k>1):
+                    a+=1
+            
+    if(count>=1 or a>=1):
+        final.append("NO")
+    else:
+        final.append("YES")
+for i in final:
+    print(i)
