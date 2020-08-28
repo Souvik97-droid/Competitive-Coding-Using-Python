@@ -1,0 +1,37 @@
+Chef organized a Football tournament. N teams participated in the contest and every team was given a number 1 to N according to their arrival. The tournament rules are as follows
+
+Each team has to play against N−1 teams
+In the ith game winner team will get +4 points and the losing team will get 0 points
+If a game is a draw then both teams will get +1 points
+After the tournament is over the team which has the maximum point will be declared the winner
+If more than one team has the Maximum point then the team who scored the maximum goals between them will be the winner.
+Your task is to help the Chef find which team has won the Tournament.
+
+Input:
+The first line will contain an Integer N denoting the number of Teams participated in the Tournament.
+From Second line there are N∗(N−1)/2 lines containing four Integers T1 T2 G1 G2.
+T1 T2denoting the Team numbers and G1 G2 are the goals scored by the teams respectively.
+Output:
+You have to output a single Integer Denoting the Number of the team who won the tournament.
+
+Constraints
+1≤N≤105
+1≤T1,T2≤N
+0≤G1,G2≤109
+Sample Input:
+4
+1 2 2 1
+1 3 1 1
+4 2 2 3
+4 1 1 0
+3 4 3 0
+3 2 0 0
+Sample Output:
+3
+EXPLANATION:
+Team  Score  Goals
+1       5       3
+2       5       4
+3       6       4
+4       4       3
+Here we can see clearly that Team 3 has the maximum points i.e. Team 3 is the winner. so, the output is 3.
