@@ -1,0 +1,30 @@
+n=int(input())
+for _ in range(n):
+    k=int(input())
+    count=0
+    var=0
+    set1=set()
+    teams=[]
+    for i in range(k):
+	    teams.append(input().strip())
+
+    
+    list1=list(set(teams))
+    a=len(list1)
+
+    m=0
+    for l in range(0,len(teams)):
+	    if(list1[m]==teams[l]):
+		    count+=1
+	    else:
+		    var+=1
+
+    if(count>var):
+        print(list1[m])
+    elif(count<var):
+        print(list1[m+1])
+    else:
+        print("Draw")
+     
+    
+    
