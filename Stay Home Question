@@ -1,0 +1,27 @@
+Due to the COVID-19 outbreak, everyone is advised to stay home. Some people, however, want to get out and live normally like they did.
+
+Chef has a solution to this problem, that involves solving another problem.
+
+To keep all the extroverts engaged at home, Chef has thought of a puzzle for them to solve.
+
+This puzzle involves a number, N, of which the extroverts need to find the second smallest factor, F, largest digit L from the unit place, and increase all the even digits by 1 in the resultant R.
+
+However, being incapable of doing this repeatedly for many numbers, you are now given the task to automate it. For every input N, you need to print F, L and R.
+
+Input:
+First line of input contains number of test cases, T First and only line of every test case will contain an integer N.
+
+Output:
+For each N, print a line containing 3 space-separated numbers, F L, R.
+
+Constraints
+1≤T≤1000
+1≤N≤999999
+Sample Input:
+    1
+247156
+Sample Output:
+4 4 357157
+EXPLANATION:
+The second smallest factorial for 247156 is 4. The largest digit in 247156 is 7, which is on position 4 from the unit place. 
+The even digits are 2, 4 an 6, which are increased by 1, to obtain 357157
