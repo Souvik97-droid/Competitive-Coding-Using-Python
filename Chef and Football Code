@@ -1,0 +1,49 @@
+# cook your dish here
+from collections import defaultdict
+n=int(input())
+final=[]
+#points=defaultdict(int)
+#gd=defaultdict(int)
+for _ in range((n*(n-1))//2):
+    points=defaultdict(int)
+    gd=defaultdict(int)
+    t1,t2,g1,g2=list(map(int,input().split()))
+    if(g1>g2):
+        points[t1]+=4
+        gd[t1]+=(g1-g2)
+        points[t2]+=0
+        gd[t2]+=(g2-g1)
+    elif(g1==g2):
+        points[t1]+=1
+        points[t2]+=1
+        gd[t1]+=(g1-g2)
+        gd[t2]+=(g1-g2)
+    else:
+        points[t1]+=0
+        points[t2]+=4
+        gd[t1]+=(g1-g2)
+        gd[t2]+=(g2-g1)
+points=dict(sorted(points.items(),key=lambda x:x[1],reverse=True))
+gd=dict(sorted(gd.items(),key=lambda x:x[1],reverse=True))
+points_list_keys=[]
+points_list_values=[]
+gd_keys=[]
+for k,v in points.items():
+    points_list_keys.append(k)
+    points_list_values.append(v)
+    #print(points_list_keys)
+    #print(points_list_values)
+for k,v in gd.items():
+    gd_keys.append(k)
+    #print(gd_keys)
+if(points_list_values[0]>points_list_values[1]):
+    final.append(points_list_keys[0])
+else:
+    final.append(gd_keys[0])
+#print(points_list_keys)
+#print(points_list_values)
+#print(gd_keys)
+for i in final:
+    print(i)
+        
+        
