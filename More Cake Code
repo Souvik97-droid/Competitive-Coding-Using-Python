@@ -1,0 +1,39 @@
+T=int(input())
+final=[]
+impossible=[]
+possible=[]
+for _ in range(T):
+    llist=[]
+    llist1=[]
+    s,n,k,r=list(map(int,input().split())) 
+    llist.append(k)
+    for i in range(n-1):
+        b=llist[i]*r
+        llist.append(b)
+            
+    x=sum(llist)
+    #print(x)
+    if(x<s):
+        b=s-x
+        possible.append(b)
+        llist1.append("POSSIBLE")
+        llist1.append(b)
+        final.append(llist1)
+    else:
+        b=s-x
+        a=abs(b)
+        impossible.append(a)
+        llist1.append("IMPOSSIBLE")
+        llist1.append(a)
+        final.append(llist1)
+
+for item in final:
+    print(item[0],item[1])
+    
+
+j=sum(impossible)       
+l=sum(possible)
+if(j>l):
+    print("IMPOSSIBLE")
+else:
+    print("POSSIBLE")
