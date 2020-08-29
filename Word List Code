@@ -1,0 +1,39 @@
+import string
+N=int(input())
+list1=[]
+list2=[]
+list3=[]
+count=0
+remov_duplicate=[]
+Punctuations=".,;:'"
+for _ in range(N):
+    string=input().split()
+    list1.append(string)
+#print(list1)
+for item in list1:
+    for i in item:
+        list2.append(i)
+list2.sort()
+#print(list2)
+#print(" ".join(list2))
+out = map(lambda x:x.lower(), list2)
+output=list(out)
+#print(output)
+str1= ' '.join([str(elem) for elem in output])
+#print(str1)
+    
+for i in str1:
+    if i in Punctuations:
+        str1=str1.replace(i," ")
+#print(str1)
+list3=list(map(str,str1.split()))
+#print(list3)
+list3.sort()
+for y in list3:
+    if y not in remov_duplicate:
+        remov_duplicate.append(y)
+for i in remov_duplicate:
+    count+=1
+print(count)
+for i in remov_duplicate:
+    print(i)
