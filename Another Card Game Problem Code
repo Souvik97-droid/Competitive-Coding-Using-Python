@@ -1,0 +1,30 @@
+T=int(input())
+for _ in range(T):
+    x,y=list(map(int,input().split()))
+    c=str(x)
+    r=str(y)
+    if x<=9 and y<=9:
+        print(1,1)
+    else:
+        str1=""
+        str2=""
+        k=x//9
+        str1+=str(9)*k
+        #print(str1)
+        l=x%9
+        if(l!=0):
+            str1+=(str(l))
+        #print(str1)        
+        m=y//9        
+        str2+=str(9)*m
+        n=y%9
+        if(n!=0):
+            str2+=(str(n))    
+       # print(str2)
+        
+        if(len(str1)<len(str2)):
+            print(0,len(str1))
+        elif(len(str2)<len(str1)):
+            print(1,len(str2))
+        else:
+            print(1,1)
