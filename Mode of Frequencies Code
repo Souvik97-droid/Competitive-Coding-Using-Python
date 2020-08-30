@@ -1,0 +1,35 @@
+for _ in range(int(input())):
+    n=int(input())
+    nos=list(map(int,input().split()))
+    dct={}
+    d={}
+    for n in nos:
+        if n not in dct:
+            dct[n]=1
+        else:
+            dct[n]+=1
+    print(dct)
+    for v in dct.values():
+        if v not in d:
+            d[v]=1
+        else:
+            d[v]+=1
+    l1=[]
+    l2=[]
+    for i in d.values():
+        l1.append(i)
+    for j in d.keys():
+        l2.append(j)    
+    m=max(l1)
+    if l1.count(m)==1:
+        k=l1.index(m)
+        print(l2[k])
+    else:
+               
+        a=[]
+        for i in range(len(l1)):
+            if l1[i]==m:
+                a.append(l2[i])
+        print(min(a))
+            
+    
