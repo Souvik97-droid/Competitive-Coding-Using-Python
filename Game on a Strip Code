@@ -1,0 +1,41 @@
+T=int(input())
+for _ in range(T):
+    n=int(input())
+    nos=list(map(int,input().split()))
+    llist=[]
+    llist1=[]
+    count=0
+    for i in range(len(nos)):
+        if nos[i]==0:
+            count+=1
+        else:
+            llist.append(count)
+            count=0   
+    for j in llist:
+        if j>0:
+            llist1.append(j)
+    #print(llist1)       
+    if len(llist1)==1:
+        if llist1[0]%2!=0:
+            print("Yes")            
+        else:
+            print("No")
+  
+    if 0 not in nos:
+        print("No")
+    if 1 not in nos:        
+        if len(nos)%2==0:
+            print("No")
+        if len(nos)%2!=0:
+            print("Yes")
+    if len(llist1)>1:
+        llist1.sort()
+        k=max(llist1)
+        x=llist1[-2]
+        if x>k//2:
+            print("No")
+        elif x<k//2:
+            print("Yes")
+        elif x==k//2:
+            print("No")
+        
